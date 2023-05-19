@@ -36,7 +36,9 @@ jobs:
           python-version: '3.10' 
           
       - name: modules imported
-        run: pip install pandas, pip install chardet
+        run: pip install pandas
+      - name: chardet module
+        run: pip install chardet
       
       - name: execute python script
         run: python generate.py
