@@ -2,7 +2,7 @@ from validator import *
 import os
 import  sys
 
-input_rel_path = '../../../lib/src/Localization/Localization.txt'
+input_rel_path = 'test.txt'
 
 current_directory=os.getcwd()
 directory_path=os.path.join(current_directory,__file__)
