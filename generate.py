@@ -2,17 +2,22 @@ from validator import *
 import os
 import  sys
 
-input_rel_path = 'test.txt'
+
+
+dirname = os.path.dirname(__file__)
+filename = os.path.join(dirname, 'test.txt')
+
 
 current_directory=os.getcwd()
 directory_path=os.path.join(current_directory,__file__)
 path = os.path.dirname(directory_path)
-input_path=os.path.join(path,input_rel_path)
+input_path=os.path.join(path,filename)
 
-output_directory=os.path.join(path,"..\\bin\\")
-output_path=os.path.join(output_directory,"untranslated_keys.csv")
-if not os.path.exists(output_directory):
-   os.makedirs(output_directory);
+# output_directory=os.path.join('test.txt')
+output_path=os.path.join(dirname,"untranslated_keys.csv")
+# if not os.path.exists(output_directory):
+#
+#  os.makedirs(output_directory);
 
 encode=detecting_encoding(input_path)
 if encode == "UTF-16":
