@@ -34,7 +34,8 @@ def filter(input_path, outputfilename):
 
     combining_values = dict(zip(column_names, ([index] for index in search_values)))
 
-    read_data_new = read_data[read_data[column_names].isin(combining_values).any(1)]
+    read_data_new = read_data[read_data[column_names].isin(combining_values).any(axis=1)]
+
 
 
     # after filteration csv file will be generated containing the keys whoose status is new or any cell is empty
