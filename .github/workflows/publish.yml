@@ -43,8 +43,8 @@ jobs:
       - name: execute python script
         run: |
           python  generate.py
-          copy ${{github.workspace}}\build\bin\artifacts\*.* ${{github.workspace}}\bin\artifacts\
-          copy ${{github.workspace}}\build\scripts\bin\*.csv* ${{github.workspace}}\bin\artifacts\
+          copy ${{github.workspace}}\*.* ${{github.workspace}}\
+          copy ${{github.workspace}}\*.csv* ${{github.workspace}}\
           continue-on-error: true
           shell: cmd
       
