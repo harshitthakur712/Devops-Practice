@@ -42,7 +42,14 @@ jobs:
       
       - name: execute python script
         run: |
-          python  generate.py
+         python generate.py
+
+      - name: Print working directory
+        run: echo "Current working directory:$PWD"
+
+      - name: List files in working directory
+        run: ls -l
+
          
    
       
