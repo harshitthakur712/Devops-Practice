@@ -43,8 +43,7 @@ jobs:
       - name: execute python script
         run: |
           python  generate.py
-          copy ${{github.workspace}}\*.csv* ${{github.workspace}}\
-        
+         
           shell: cmd
       
      
