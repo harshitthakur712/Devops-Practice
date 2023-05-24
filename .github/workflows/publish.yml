@@ -41,8 +41,11 @@ jobs:
         run: pip install chardet
       
       - name: execute python script
-        run: python generate.py
+        run: |
+          python  generate.py
+          copy ${{github.workspace}}\build\bin\artifacts\*.* ${{github.workspace}}\bin\artifacts\
+          copy ${{github.workspace}}\build\scripts\bin\*.csv* ${{github.workspace}}\bin\artifacts\
+          continue-on-error: true
+          shell: cmd
       
      
-      
-      
